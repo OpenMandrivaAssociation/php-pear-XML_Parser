@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	XML parsing class based on PHP's bundled expat
 License:	PHP License
 Group:		Development/PHP
@@ -57,7 +57,7 @@ pear install --nodeps --soft --force --register-only \
 %preun
 if [ "$1" -eq "0" ]; then
     pear uninstall --nodeps --ignore-errors --register-only \
-        %{pear_name} >/dev/null || :
+        %{upstream_name} >/dev/null || :
 fi
 
 %files
