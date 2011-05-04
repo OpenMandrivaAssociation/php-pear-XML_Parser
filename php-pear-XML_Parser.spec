@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	XML parsing class based on PHP's bundled expat
 License:	PHP License
 Group:		Development/PHP
