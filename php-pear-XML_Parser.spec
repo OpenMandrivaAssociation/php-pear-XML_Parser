@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.3.4
-Release:	%mkrel 3
+Release:	%mkrel 2
 Summary:	XML parsing class based on PHP's bundled expat
 License:	PHP License
 Group:		Development/PHP
@@ -15,8 +15,6 @@ Requires(preun): php-pear
 Requires:	php-pear
 BuildRequires:	php-pear
 BuildArch:	noarch
-# because it was broken out and the one doing it was pretty careless...
-Conflicts:	php-pear < 1:1.9
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -71,3 +69,33 @@ fi
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/packages/%{upstream_name}.xml
 
+
+
+%changelog
+* Thu May 05 2011 Oden Eriksson <oeriksson@mandriva.com> 1.3.4-2mdv2011.0
++ Revision: 667680
+- mass rebuild
+
+* Thu Oct 28 2010 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.4-1mdv2011.0
++ Revision: 589700
+- new version
+
+* Sun Nov 15 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.2-3mdv2010.1
++ Revision: 466339
+- spec cleanup
+- use pear installer
+- don't ship tests, even in documentation
+- own all directories
+- use rpm filetriggers starting from mandriva 2010.1
+
+* Thu Oct 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.2-2mdv2010.0
++ Revision: 452033
+- fix %%postun
+
+* Mon Sep 28 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.2-1mdv2010.0
++ Revision: 450708
+- import php-pear-XML_Parser
+
+
+* Fri Sep 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.2-1mdv2010.0
+- split out from php-pear package
