@@ -5,7 +5,7 @@
 Summary:	XML parsing class based on PHP's bundled expat
 Name:		php-pear-%{modname}
 Version:	1.3.4
-Release:	3
+Release:	4
 License:	PHP License
 Group:		Development/PHP
 Url:		http://pear.php.net/package/%{modname}
